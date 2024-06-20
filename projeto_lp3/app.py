@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from validate_docbr import CPF,CNPJ
 
 app = Flask("Minha Aplicação")
 
@@ -22,5 +23,21 @@ def produtos():
     ]
 
     return render_template("produtos.html", produtos=lista_produtos)
+
+@app.route("/cpf")
+def cpf():
+    cpf=CPF()
+    cpf_gerado = cpf.generate(True)
+    return render_template("cpf.html", cpf=cpf_gerado)
+
+@app.route("/cnpj")
+def cnpj():
+    cnpj=CNPJ()
+    cnpj_gerado = cnpj.generate(True)
+    return render_template("cnpj.html", cnpj=cnpj_gerado)
+
+@app.route("/termosdeuso")
+def TdU():
+    return render_template("TdU.html")
 
 app.run()

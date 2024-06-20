@@ -7,27 +7,11 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <a href="/">Home Page</a>
-        <a href="/contato">Contato</a>
-        <a href="/produtos">Produtos</a>
-    </nav>
     {% block content %}
     {% endblock %}
-
-    <h1>Geradores</h1>
-    <nav>
-        <a href="/cpf">CPF</a>
-        <a href="/cnpj">CNPJ</a>
-    </nav>
 
     <footer>
         <p>Desenvolvido por Milhomem</p>
     </footer>
-
-    <nav>
-        <a href="/termosdeuso">Termos de Uso</a>
-        
-    </nav>
 </body>
 </html>
