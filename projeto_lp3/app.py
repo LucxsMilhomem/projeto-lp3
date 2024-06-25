@@ -1,8 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from validate_docbr import CPF,CNPJ
 
-app = Flask("Minha Aplicação")
+lista_produtos = [
+        { "nome": "Coca-cola", "descricao": "Mata a sede" },   
+        { "nome": "Doritos", "descricao": "Suja a mão" },
+        { "nome": "Chocolate", "descricao": "Bom" }
+    ]
 
+app = Flask("Minha Aplicação")
 
 @app.route("/")
 def home():
@@ -16,12 +21,6 @@ def contato():
 # página produtos - /produtos
 @app.route("/produtos")
 def produtos():
-    lista_produtos = [
-        { "nome": "Coca-cola", "descricao": "Mata a sede" },   
-        { "nome": "Doritos", "descricao": "Suja a mão" },
-        { "nome": "Chocolate", "descricao": "Bom" }
-    ]
-
     return render_template("produtos.html", produtos=lista_produtos)
 
 @app.route("/cpf")
@@ -39,5 +38,17 @@ def cnpj():
 @app.route("/termosdeuso")
 def TdU():
     return render_template("TdU.html")
+
+@app.route("/produtos/cadastro", methods=['GET'])
+def cadastro():
+    return render_template("cadastroProduto.html")
+
+@app.route("/produtos", methods=["POST"])
+def salvar_produto():
+    nome = request.form['nome']
+    descricao = request.form['descricao']
+    produto = {"nome": nome, "descricao": descricao}
+    lista_produtos.append(produto)
+    return render_template("produtos.html", produtos=lista_produtos)
 
 app.run()

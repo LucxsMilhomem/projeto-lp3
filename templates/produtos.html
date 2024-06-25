@@ -13,8 +13,9 @@ Produtos
 <h2>{{ produto.nome }}</h2>
 <p>{{ produto.descricao }}</p>
 {% endfor %}
+<a href="/produtos/cadastro">Cadastre um Produto</a>
 {% else %}
-<p>Aguarde o lançamento dos produtos</p>
+<a href="/produtos/cadastro">Cadastre um Produto</a>
 {% endif %}
 
 {% endblock %}
