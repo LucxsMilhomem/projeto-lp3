@@ -35,9 +35,18 @@ def cnpj():
     cnpj_gerado = cnpj.generate(True)
     return render_template("cnpj.html", cnpj=cnpj_gerado)
 
-@app.route("/termosdeuso")
+@app.route("/termosDeUso")
 def TdU():
     return render_template("TdU.html")
+
+@app.route("/politica")
+def PdP():
+    return render_template("PdP.html")
+
+@app.route("/comoUtilizar")
+def comoUtilizar():
+    return render_template("comoUtilizar.html")
+
 
 @app.route("/produtos/cadastro", methods=['GET'])
 def cadastro():

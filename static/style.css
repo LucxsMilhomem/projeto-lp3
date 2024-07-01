@@ -12,3 +12,27 @@ footer{
     padding: 20px;
     margin-top: 20px;
 }
+
+body{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+a, h1, p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+a{
+    margin: 0 20px;
+}
+
+hr {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    border-width: 2px;
+    border-color: black;
+    }
