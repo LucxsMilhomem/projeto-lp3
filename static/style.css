@@ -1,16 +1,11 @@
 h1{
     border: 1px splid black;
-    padding: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 label, input, button{
     display: block;
-}
-
-footer{
-    padding: 20px;
-    margin-top: 20px;
 }
 
 body{
@@ -25,6 +20,16 @@ a, h1, p{
 
 a{
     margin: 0 20px;
+    color: dodgerblue;
+}
+
+.encima{
+    font-size: 25px;
+}
+
+.embaixo{
+    font-size: 20px;
+    text-decoration: none;
 }
 
 hr {
@@ -32,7 +37,19 @@ hr {
     margin-right: auto;
     margin-left: auto;
     margin-top: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 5px;
     border-width: 2px;
     border-color: black;
     }
+
+.texto {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 25;
+}
