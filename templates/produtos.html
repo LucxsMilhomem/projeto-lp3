@@ -6,16 +6,10 @@ Produtos
 
 {% block content %}
 <h1>Produtos</h1>
-
-{% if produtos %}
-<p>confira nossos produtos abaixo</p>
 {% for produto in produtos %}
-<h2>{{ produto.nome }}</h2>
-<p>{{ produto.descricao }}</p>
+<p class="produto"></p>
+<h2 class="nd">{{ produto.nome }}</h2>
+<p class="nd">{{ produto.descricao }}</p>
 {% endfor %}
-<a href="/produtos/cadastro">Cadastre um Produto</a>
-{% else %}
-<a href="/produtos/cadastro">Cadastre um Produto</a>
-{% endif %}
 
 {% endblock %}
