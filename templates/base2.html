@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     {% block content %}
     {% endblock %}
+
+    <h1>Geradores</h1>
+    <nav>
+        <a href="/cpf" class="embaixo">CPF</a>
+        <a href="/cnpj" class="embaixo">CNPJ</a>
+        <a href="/" class="embaixo">Home Page</a>
+    </nav>
 
     <footer>
         <p>Desenvolvido por Milhomem</p>

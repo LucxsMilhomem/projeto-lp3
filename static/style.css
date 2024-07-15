@@ -32,11 +32,15 @@ a{
     text-decoration: none;
 }
 
+.home{
+    width: 25%;
+}
+
 hr {
     width: 50%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-bottom: 5px;
     border-width: 2px;
     border-color: black;
